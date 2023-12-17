@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body class="text-center">
+    <section>
+        <h1>회원가입 페이지</h1>
+    </section>
+
+    <section>
+        <form name="registerForm" id="registerForm" method="post" th:action="@{/register}" th:object = "${userInfo}" >
+            아이디<br>
+            <input type="text" th:field="*{userId}" name="userId" placeholder="아이디 입력" >
+            <br><br>
+            비밀번호<br>
+            <input type="password" th:field="*{userPassword}" name="userPassword">
+            <br><br>
+            이름<br>
+            <input type="text" th:field="*{userName}" name="userName">
+            <br><br>
+            성별<br>
+            <label for="man">남자</label>
+            <input type="radio" th:field="*{gender}" name="gender" value="male" id="man">
+            <label for="woman">여자</label>
+            <input type="radio" th:field="*{gender}" name="gender" value="famale" id="woman">
+            <br><br>
+            이메일<br><input type="email" th:field="*{userEmail}" name="userEmail" placeholder="email@gmail.com">
+            <br><br>
+            휴대전화<br>
+            <input type="text" th:field="*{phoneNumber}" name="phoneNumber" placeholder="010-****-****">
+            <input type="button" name="certification" value="확인"><br><br>
+
+            <input type="submit" name="" value="제출" onclick = "saveUser()">
+
+        </form>
+    </section>
+
+</html>
