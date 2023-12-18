@@ -1,4 +1,4 @@
-package com.user.register.rest;
+package com.user.register.adapter.rest;
 
 import com.user.register.domain.UserInfo;
 import com.user.register.service.RegisterService;
@@ -16,8 +16,8 @@ public class RegisterRest {
     // 회원가입 처리
     @PostMapping("/register")
     public void register(UserInfo userInfo){
-    
-        registerService.saveUserInfo(userInfo);
+
+        return registerService.saveUserInfo(userInfo);
     }
 
 }

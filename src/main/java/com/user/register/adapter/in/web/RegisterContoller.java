@@ -1,4 +1,4 @@
-package com.user.register.controller;
+package com.user.register.adapter;
 
 import com.user.register.domain.UserInfo;
 import org.springframework.stereotype.Controller;
