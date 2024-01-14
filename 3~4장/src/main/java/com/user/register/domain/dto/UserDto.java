@@ -1,18 +1,16 @@
-package com.user.register.domain;
+package com.user.register.domain.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.user.register.adapter.out.entity.UserInfoEntity;
+import com.user.register.domain.User;
+import lombok.*;
 
-import java.time.LocalDateTime;
-
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
 @Setter
-public class UserInfo {
-    //id
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class UserDto {
+    // id
     private Integer id;
     // userId
     private String userId;
@@ -22,9 +20,8 @@ public class UserInfo {
     private String userName;
     // 성별
     private String gender;
-    // 이메일s
+    // 이메일
     private String userEmail;
     // 핸드폰 번호
     private String phoneNumber;
-
 }
